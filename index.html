@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Infinite Lights</title>
-		<meta name="description" content="A Three.js powered animation that resembles the nightly view of fast cars on a road." />
-		<meta name="keywords" content="webgl, three.js, cars, road, highway, lights, speed, web development, demo, javascript" />
-		<meta name="author" content="Epic Programmer" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link href="https://fonts.googleapis.com/css2?family=Georama:wght@400&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.typekit.net/uok8swb.css">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-		<script>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project Alpha</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Georama:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/uok8swb.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<script>
 		document.documentElement.className = "js";
-		var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+		var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
 		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-		</script>
-	</head>
-	<body class="demo">
-		<main>
-			<div class="content">
-				<div id="app"></div>
-				<div class="content__title-wrap">
-					<span class="content__pretitle">Welcome to</span>
-					<h2 class="content__title">Epic Programmer</h2>
-					<a class="content__link" href="#">Consider Subscribing...</a>
-				</div>
+	</script>
+</head>
+
+<body class="demo">
+	<main>
+		<div class="content">
+			<div id="app"></div>
+			<div class="content__title-wrap">
+				<span class="content__pretitle">Welcome To</span>
+				<h2 class="content__title">Project Alpha</h2>
+				<a class="content__link" href="#">The Alpha of all Projects</a>
 			</div>
-		</main>
-		<script src="js/three.min.js"></script>
-		<script src="js/postprocessing.min.js"></script>
-		<script src="js/InfiniteLights.js"></script>
-		<script src="js/Distortions.js"></script>
-		<script>
-		(function() {
+		</div>
+	</main>
+	<script src="js/three.min.js"></script>
+	<script src="js/postprocessing.min.js"></script>
+	<script src="js/InfiniteLights.js"></script>
+	<script src="js/Distortions.js"></script>
+	<script>
+		(function () {
 
 			const container = document.getElementById('app');
 
 			const options = {
-				onSpeedUp: (ev) => {					
+				onSpeedUp: (ev) => {
 				},
 				onSlowDown: (ev) => {
 				},
 				// mountainDistortion || LongRaceDistortion || xyDistortion || turbulentDistortion || turbulentDistortionStill || deepDistortionStill || deepDistortion
-				distortion: xyDistortion, 
-				
+				distortion: xyDistortion,
+
 				length: 400,
 				roadWidth: 9,
 				islandWidth: 2,
@@ -101,6 +100,7 @@
 			const myApp = new App(container, options);
 			myApp.loadAssets().then(myApp.init)
 		})()
-		</script>
-	</body>
+	</script>
+</body>
+
 </html>
